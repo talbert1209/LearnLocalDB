@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnLocalDB", "LearnLocalDB\LearnLocalDB.csproj", "{1594CBC7-2086-455F-B5C9-C17602CC8F97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1594CBC7-2086-455F-B5C9-C17602CC8F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1594CBC7-2086-455F-B5C9-C17602CC8F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1594CBC7-2086-455F-B5C9-C17602CC8F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1594CBC7-2086-455F-B5C9-C17602CC8F97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {355E715D-82B9-4C98-AE97-D564E0E7A3B2}
+	EndGlobalSection
+EndGlobal
