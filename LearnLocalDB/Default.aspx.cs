@@ -16,10 +16,14 @@ namespace LearnLocalDB
             var customers = db.Customers;
             string result = "";
 
-            foreach (var customer in customers)
-            {
-                result += $"<p>{customer.Name}</p>";
-            }
+            // *** This is for the first exercise ***
+            //foreach (var customer in customers)
+            //{
+            //    result += $"<p>{customer.Name}</p>";
+            //}
+
+            customersGridView.DataSource = customers.ToList();
+            customersGridView.DataBind();
 
             resultLabel.Text = result;
         }

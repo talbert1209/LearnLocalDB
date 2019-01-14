@@ -9,6 +9,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:GridView ID="customersGridView" runat="server">
+            </asp:GridView>
+            <br />
+            <br />
             <asp:Label ID="resultLabel" runat="server"></asp:Label>
         </div>
     </form>
