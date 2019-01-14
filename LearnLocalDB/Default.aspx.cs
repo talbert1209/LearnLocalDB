@@ -11,7 +11,17 @@ namespace LearnLocalDB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ACMEEntities db = new ACMEEntities();
 
+            var customers = db.Customers;
+            string result = "";
+
+            foreach (var customer in customers)
+            {
+                result += $"<p>{customer.Name}</p>";
+            }
+
+            resultLabel.Text = result;
         }
     }
 }
