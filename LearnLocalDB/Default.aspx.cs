@@ -27,5 +27,21 @@ namespace LearnLocalDB
 
             resultLabel.Text = result;
         }
+
+        protected void customersGridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow row = customersGridView.Rows[index];
+
+            // This is a bit risky... Take great caution.
+
+            string customerName = row.Cells[1].Text;
+            string customerAddress = row.Cells[2].Text;
+            string customerCity = row.Cells[3].Text;
+            string customerState = row.Cells[4].Text;
+            string customerZip = row.Cells[5].Text;
+
+            resultLabel.Text = $"{customerName} lives at {customerAddress} {customerCity}, {customerState} {customerZip}";
+        }
     }
 }
