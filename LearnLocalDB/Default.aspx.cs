@@ -22,10 +22,7 @@ namespace LearnLocalDB
             //    result += $"<p>{customer.Name}</p>";
             //}
 
-            var customers = Domain.CustomersManager.GetCustomers();
-
-            customersGridView.DataSource = customers.ToList();
-            customersGridView.DataBind();
+            DisplayCustomers();
 
             resultLabel.Text = result;
         }
@@ -44,6 +41,42 @@ namespace LearnLocalDB
             string customerZip = row.Cells[5].Text;
 
             resultLabel.Text = $"{customerName} lives at {customerAddress} {customerCity}, {customerState} {customerZip}";
+        }
+
+        protected void addCustomerButton_Click(object sender, EventArgs e)
+        {
+            var newCustomer = new DTO.Customer()
+            {
+                CustomerId = Guid.NewGuid(),
+                Name = nameTextBox.Text,
+                Address = addressTextBox.Text,
+                City = cityTextBox.Text,
+                State = stateTextBox.Text,
+                Postal_Code = zipTextBox.Text,
+                Notes = notesTextBox.Text
+            };
+
+            Domain.CustomersManager.AddCustomer(newCustomer);
+            DisplayCustomers();
+            ClearFields();
+        }
+
+        private void ClearFields()
+        {
+            nameTextBox.Text = "";
+            addressTextBox.Text = "";
+            cityTextBox.Text = "";
+            stateTextBox.Text = "";
+            zipTextBox.Text = "";
+            notesTextBox.Text = "";
+        }
+
+        private void DisplayCustomers()
+        {
+            var customers = Domain.CustomersManager.GetCustomers();
+
+            customersGridView.DataSource = customers.ToList();
+            customersGridView.DataBind();
         }
     }
 }

@@ -14,5 +14,10 @@ namespace LearnLocalDB.Domain
             var customers = Data.CustomersRepository.GetCustomers();
             return customers;
         }
+
+        public static void AddCustomer(DTO.Customer newCustomer)
+        {
+            Data.CustomersRepository.AddCustomer(newCustomer);
+        }
     }
 }

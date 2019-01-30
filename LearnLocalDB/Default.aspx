@@ -39,7 +39,7 @@
             <asp:TextBox ID="notesTextBox" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="addCustomerButton" runat="server" Text="Add Customer" />
+            <asp:Button ID="addCustomerButton" runat="server" Text="Add Customer" OnClick="addCustomerButton_Click" />
             <br />
             <br />
             <asp:Label ID="resultLabel" runat="server"></asp:Label>

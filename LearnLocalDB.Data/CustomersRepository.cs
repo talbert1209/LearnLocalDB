@@ -11,7 +11,7 @@ namespace LearnLocalDB.Data
         public static List<DTO.Customer> GetCustomers()
         {
             ACMEEntities db = new ACMEEntities();
-            var dbCustomers = db.Customers.ToList();
+            var dbCustomers = db.Customers.OrderBy(p => p.Name).ToList();
 
             var dtoCustomers = new List<DTO.Customer>();
 
@@ -33,6 +33,25 @@ namespace LearnLocalDB.Data
 
             return dtoCustomers;
         }
-        
+
+        public static void AddCustomer(DTO.Customer newCustomer)
+        {
+            ACMEEntities db = new ACMEEntities();
+            var customers = db.Customers;
+
+            var customer = new Customer()
+            {
+                CustomerId = newCustomer.CustomerId,
+                Name = newCustomer.Name,
+                Address = newCustomer.Address,
+                City = newCustomer.City,
+                State = newCustomer.State,
+                Postal_Code = newCustomer.Postal_Code,
+                Notes = newCustomer.Notes
+            };
+
+            customers.Add(customer);
+            db.SaveChanges();
+        }
     }
 }
