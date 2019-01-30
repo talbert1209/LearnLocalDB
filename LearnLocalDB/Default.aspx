@@ -20,6 +20,23 @@
                     <asp:BoundField DataField="Notes" HeaderText="Notes About Customer" />
                 </Columns>
             </asp:GridView>
+            <h4>Add A Customer</h4>
+            Name: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <br />
+            Address: <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <br />
+            City:
+            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <br />
+            State:
+            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+            <br />
+            Zip:
+            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+            <br />
+            Notes:
+            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+            <br />
             <br />
             <br />
             <asp:Label ID="resultLabel" runat="server"></asp:Label>
