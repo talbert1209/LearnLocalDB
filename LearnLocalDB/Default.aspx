@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <h1>App To Learn Separation Of Concerns</h1>
             <asp:GridView ID="customersGridView" runat="server" AutoGenerateColumns="False" OnRowCommand="customersGridView_RowCommand">
                 <Columns>
                     <asp:ButtonField Text="View" />
@@ -21,22 +22,24 @@
                 </Columns>
             </asp:GridView>
             <h4>Add A Customer</h4>
-            Name: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            Name: <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
             <br />
-            Address: <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            Address: <asp:TextBox ID="addressTextBox" runat="server"></asp:TextBox>
             <br />
             City:
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="cityTextBox" runat="server"></asp:TextBox>
             <br />
             State:
-            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+            <asp:TextBox ID="stateTextBox" runat="server"></asp:TextBox>
             <br />
             Zip:
-            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+            <asp:TextBox ID="zipTextBox" runat="server"></asp:TextBox>
             <br />
             Notes:
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+            <asp:TextBox ID="notesTextBox" runat="server"></asp:TextBox>
             <br />
+            <br />
+            <asp:Button ID="addCustomerButton" runat="server" Text="Add Customer" />
             <br />
             <br />
             <asp:Label ID="resultLabel" runat="server"></asp:Label>
