@@ -13,7 +13,6 @@ namespace LearnLocalDB.DTO
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        // ReSharper disable once InconsistentNaming
         public string Postal_Code { get; set; }
         public string Notes { get; set; }
     }

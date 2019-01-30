@@ -11,9 +11,9 @@ namespace LearnLocalDB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ACMEEntities db = new ACMEEntities();
+            //ACMEEntities1 db = new ACMEEntities1();
 
-            var customers = db.Customers;
+            //var customers = db.Customers;
             string result = "";
 
             // *** This is for the first exercise ***
@@ -21,6 +21,8 @@ namespace LearnLocalDB
             //{
             //    result += $"<p>{customer.Name}</p>";
             //}
+
+            var customers = Domain.CustomersManager.GetCustomers();
 
             customersGridView.DataSource = customers.ToList();
             customersGridView.DataBind();

@@ -73,16 +73,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ACMEEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ACMEEntities.Context.cs</LastGenOutput>
-      <DependentUpon>ACMEEntities.edmx</DependentUpon>
-    </Content>
-    <Content Include="ACMEEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ACMEEntities.edmx</DependentUpon>
-      <LastGenOutput>ACMEEntities.cs</LastGenOutput>
-    </Content>
     <Content Include="App_Data\ACME.mdf" />
     <Content Include="App_Data\ACME_log.ldf">
       <DependentUpon>ACME.mdf</DependentUpon>
@@ -92,24 +82,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ACMEEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ACMEEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ACMEEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ACMEEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ACMEEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ACMEEntities.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>ACMEEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,13 +95,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="ACMEEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ACMEEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ACMEEntities.edmx.diagram">
-      <DependentUpon>ACMEEntities.edmx</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -143,6 +108,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LearnLocalDB.Domain\LearnLocalDB.Domain.csproj">
+      <Project>{2589a721-5c9e-4eaa-9651-e48cfae2d172}</Project>
+      <Name>LearnLocalDB.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LearnLocalDB.DTO\LearnLocalDB.DTO.csproj">
+      <Project>{5c93a18b-3939-4d93-a22d-50af3ad6fd32}</Project>
+      <Name>LearnLocalDB.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
